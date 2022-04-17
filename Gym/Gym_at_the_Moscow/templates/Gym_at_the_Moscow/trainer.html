@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Личный тренер, тренеры фитнес клуба Hall Of Iron Санкт-Петербург Спб метро Московская{% endblock %}
+
+{% block content %}
+<section class="head">
+    <div class="head_container">
+        {% include 'includes/navbar.html' %}
+
+            <h2> Тренеры </h2>
+
+        {% for t in trainer %}
+
+        <div class="block_tr">
+            <div style="padding: 10px 10px 10px 10px; box-sizing: border-box;">
+                <p><img src="{{t.photo.url}}"></p>
+                <p>{{t.full_name}}</p>
+                <p>{{t.age}} года</p>
+                <p>{{ t.about_trainer|truncatewords:30 }}
+                    <div class="link-read"><a href="{{ t.get_url }}">
+                <i class="fa-regular fa-hand-point-right"></i>Подробнее</a></div>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

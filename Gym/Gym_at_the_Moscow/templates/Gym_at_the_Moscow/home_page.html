@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Фитнес клуб Hall Of Iron Спб Санкт-Петербург,
+    тренажерный зал метро Московская, Звёздная, Парк Победы{% endblock %}
+{% block content %}
+<section class="head">
+    <div class="head_container">
+        {% include 'includes/navbar.html' %}
+        <h2><a href="/admin/"><pre>Фитнес клуб  Hall Of Iron</pre></a></h2>
+        <IMG class="displayed" src="media/home/bakk.jpg">
+        <div class="button_home"><button class="button button4">
+            <a href="{% url 'stock-name' %}">Скидка 50%</br>на годовой абонемент!</a></button></div>
+        <IMG class="displayed" src="media/home/zall.jpg">
+        <IMG class="displayed" src="media/home/foto.jpg">
+        <div class="button_home"><button class="button button4">
+            <a href="{% url 'hall-name' %}">3 зала</br>с новым железом</a></button></div>
+        <IMG class="displayed" src="media/home/fotoo.jpg">
+        <div class="button_home"><button class="button button4">
+            <a href="{% url 'trainer-name' %}">лучшие тренеры</br>всегда рядом</a></button></div>
+        <IMG class="displayed" src="media/home/ffoto.jpg">
+    </div>
+</section>
+
+{% endblock %}
+

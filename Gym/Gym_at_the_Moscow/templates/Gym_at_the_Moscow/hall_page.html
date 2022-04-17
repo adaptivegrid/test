@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Тренажерный зал Санкт-Петербург метро Московская Спб{% endblock %}
+
+{% block content %}
+<section class="head">
+    <div class="head_container">
+        {% include 'includes/navbar.html' %}
+
+        <h2> Галерея </h2>
+
+        <IMG class="displayed" src="/media/home/foto.jpg">
+        <IMG class="displayed" src="/media/home/fotoo.jpg">
+        <IMG class="displayed" src="/media/home/ffoto.jpg">
+
+
+    </div>
+</section>
+{% endblock %}

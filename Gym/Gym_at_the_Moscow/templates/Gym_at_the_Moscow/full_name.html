@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+{% block title %}Личный тренер Санкт-Петербург Спб метро Московская{% endblock %}
+{% block content %}
+<section class="head">
+    <div class="head_container">
+
+        {% include 'includes/navbar.html' %}
+
+            <h2> Тренеры </h2>
+        <div class="center">
+             <div class="block_tr">
+                <div style="padding: 10px 10px 10px 10px; box-sizing: border-box;">
+                    <p><img src="{{train.photo.url}}"></p>
+                    <p>{{train.full_name}}</p>
+                    <p>{{train.age}} года</p>
+                    <p>{{train.about_trainer }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
