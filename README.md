@@ -7,3 +7,5 @@ http://irina-brezgunova.ru/
 Логин/пароль для входа в админ панель:
 
 test / st12345ZN
+
+<IMG class="displayed" src="image/task.jpg">
