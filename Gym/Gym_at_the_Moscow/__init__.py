@@ -1,1 +1,0 @@
-# default_app_config = 'Gym_at_the_Moscow.apps.Gym_at_the_MoscowConfig' ошибка _ _
